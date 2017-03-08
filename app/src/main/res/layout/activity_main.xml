@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+
+   <android.support.v7.widget.Toolbar
+       android:id="@+id/mainActivityToolbar"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="#3F51B5"
+       android:elevation="4dp"
+       android:contentInsetStart="0dp">
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_margin="15dp">
+
+           <Spinner
+               android:id="@+id/state"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="5dp"
+               android:layout_marginBottom="10dp"
+               android:layout_alignParentTop="true"
+               android:layout_centerHorizontal="true"/>
+
+           <Spinner
+               android:id="@+id/district"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginBottom="10dp"
+               android:layout_below="@+id/state"/>
+
+           <Button
+               android:id="@+id/submitButton"
+               android:layout_width="match_parent"
+               android:layout_height="35dp"
+               android:background="#5C6BC0"
+               android:textColor="#C5CAE9"
+               android:text="Search"
+               android:layout_below="@+id/district" />
+       </RelativeLayout>
+   </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/bloodBanksRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>
+
+
